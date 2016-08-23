@@ -2,7 +2,7 @@ const $ = document.querySelector.bind(document);
 
 import { Observable } from 'rxjs';
 import { createStore, applyMiddleware } from 'redux';
-import { createEpicMiddleware } from 'redux-observable';
+import { createEpicMiddleware } from 'redux-observable/lib/createEpicMiddleware';
 
 const tickEpic = action$ =>
   action$
@@ -36,8 +36,8 @@ store.subscribe(renderApp)
 
 store.dispatch({type: 'START'});
 
-setTimeout(() => store.dispatch({type: 'STOP'}), 3000);
+// setTimeout(() => store.dispatch({type: 'STOP'}), 3000);
 
-setTimeout(() => store.dispatch({type: 'START'}), 5000);
+// setTimeout(() => store.dispatch({type: 'START'}), 5000);
 
 
