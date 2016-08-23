@@ -1,6 +1,11 @@
 const $ = document.querySelector.bind(document);
 
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/interval';
+import 'rxjs/add/operator/mergeMap';
+import 'rxjs/add/operator/mapTo';
+import 'rxjs/add/operator/takeUntil';
+
 import { createStore, applyMiddleware } from 'redux';
 import { createEpicMiddleware } from 'redux-observable/lib/createEpicMiddleware';
 
