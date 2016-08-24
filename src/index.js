@@ -1,4 +1,4 @@
-const $ = document.querySelector.bind(document);
+const $ = ::document.querySelector;
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/interval';

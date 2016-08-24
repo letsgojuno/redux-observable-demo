@@ -22,7 +22,7 @@ export default {
     }),
     babel({
       presets: ['es2015-loose-rollup'],
-      plugins: [],
+      plugins: ['transform-function-bind'],
       babelrc: false,
       include: '**/*.js',
     }),
